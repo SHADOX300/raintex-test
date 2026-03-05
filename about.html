@@ -4,125 +4,153 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>За нас | Raintex</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffffff;
-      color: #555;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #006b3c;/*#00B3B3 /* #009fe3 */
-      padding: 15px 0;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .logo {
-      height: 40px;
-      width: auto;
-    }
-    .hero-section {
-      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('./images/landscape-tree-grass.jpg') no-repeat center 60%;
-      background-size: cover;
-      text-align: center;
-      padding: 150px 20px 100px 20px;
-      color: white;
-    }
-    .hero-section h1 {
-      font-size: 50px;
-      margin-bottom: 10px;
-    }
-    .hero-section p {
-      font-size: 24px;
-      font-weight: 300;
-    }
-    .about-content {
-      max-width: 1200px;
-      margin: 60px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-    .about-content h2 {
-      color: #00B3B3;
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-    .about-content p {
-      font-size: 20px;
-      line-height: 1.6;
-      color: #666;
-    }
-    footer {
-      background-color: #006b3c;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    @media (max-width: 768px) {
-      .hero-section {
-        padding: 100px 20px 60px 20px;
-      }
-      .hero-section h1 {
-        font-size: 36px;
-      }
-      .hero-section p {
-        font-size: 18px;
-      }
-      .about-content h2 {
-        font-size: 28px;
-      }
-      .about-content p {
-        font-size: 18px;
-      }
-      nav {
-                flex-direction: row;
-                gap: 10px;
-                align-items: center;
-            }
-    }
-  </style>
+  <meta name="description" content="Научете повече за Raintex - вашият доверен партньор в света на водоснабдяването и поливните системи.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <nav>
-    <a href="index.html"><img src="./Logos_ByTailorBrands/dark_logo_transparent_background.png" alt="Raintex Logo" class="logo"></a>
-    <a href="about.html">За нас</a>
-    <a href="services.html">Услуги</a>
-    <a href="gallery.html">Галерия</a>
-    <a href="contacts.html">Контакти</a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="./Logos_ByTailorBrands/dark_logo_transparent_background.webp" alt="Raintex Logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Начало</a>
+        <a href="about.html" class="active">За нас</a>
+        <a href="services.html">Услуги</a>
+        <a href="gallery.html">Галерия</a>
+        <a href="contacts.html" class="nav-cta">Контакти</a>
+      </div>
+      <button class="hamburger" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </nav>
+  <div class="nav-overlay"></div>
 
-  <section class="hero-section">
+  <!-- Page Hero -->
+  <section class="page-hero">
     <h1>За нас</h1>
     <p>Вашият доверен партньор в света на водоснабдяването и поливните системи</p>
   </section>
 
-  <section class="about-content">
-    <h2>Кои сме ние?</h2>
-    <p>
-      В Raintex ние вярваме, че всяка капка вода е безценна. 
-      Със страст към иновациите и грижа за клиентите си, ние предлагаме модерни решения за автоматизирано поливане, хидрофорни системи и цялостни ВиК услуги. 
-      Нашият екип от професионалисти работи с внимание към детайла, за да предостави качествени и надеждни системи, които улесняват живота на нашите клиенти.
-    </p>
-    <p>
-      Независимо дали имате нужда от изграждане на нова поливна система, монтаж на хидрофор или ремонт на ВиК инсталации – ние сме тук, за да помогнем. 
-      Изберете Raintex – изберете качество, сигурност и грижа за природата!
-    </p>
+  <!-- About Content -->
+  <section class="section">
+    <div class="container">
+      <div class="feature-row fade-up">
+        <div class="feature-image">
+          <img src="./images/sprinkler_house.webp" alt="Raintex проект" loading="lazy">
+        </div>
+        <div class="feature-text">
+          <span class="section-label">Кои сме ние</span>
+          <h2>Всяка капка вода е безценна</h2>
+          <p>В Raintex ние вярваме, че всяка капка вода е безценна. Със страст към иновациите и грижа за клиентите си, ние предлагаме модерни решения за автоматизирано поливане, хидрофорни системи и цялостни ВиК услуги.</p>
+        </div>
+      </div>
+
+      <div class="feature-row reversed fade-up">
+        <div class="feature-image">
+          <img src="./images/grass-water1.webp" alt="Поливна система в действие" loading="lazy">
+        </div>
+        <div class="feature-text">
+          <span class="section-label">Нашата мисия</span>
+          <h2>Качество, сигурност и грижа за природата</h2>
+          <p>Нашият екип от професионалисти работи с внимание към детайла, за да предостави качествени и надеждни системи, които улесняват живота на нашите клиенти. Независимо дали имате нужда от изграждане на нова поливна система, монтаж на хидрофор или ремонт на ВиК инсталации - ние сме тук, за да помогнем.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Raintex | Не стой на сухо</p>
+  <!-- Values -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Нашите ценности</span>
+        <h2 class="section-title">Защо да изберете нас?</h2>
+      </div>
+      <div class="card-grid">
+        <div class="card fade-up">
+          <div class="card-icon">&#x1F3AF;</div>
+          <h3>Професионализъм</h3>
+          <p>Бърза реакция и внимание към детайла от първия ден на проекта до неговото завършване.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">&#x1F331;</div>
+          <h3>Грижа за природата</h3>
+          <p>Използваме технологии, които пестят вода и енергия, защото бъдещето зависи от нашите действия днес.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">&#x1F91D;</div>
+          <h3>Доверие</h3>
+          <p>Изграждаме дългосрочни отношения с нашите клиенти чрез прозрачност и качество на работата.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-up">
+          <div class="stat-number" data-count="150" data-suffix="+">0</div>
+          <div class="stat-label">Доволни клиенти</div>
+        </div>
+        <div class="stat-item fade-up">
+          <div class="stat-number" data-count="200" data-suffix="+">0</div>
+          <div class="stat-label">Завършени проекти</div>
+        </div>
+        <div class="stat-item fade-up">
+          <div class="stat-number" data-count="5" data-suffix="+">0</div>
+          <div class="stat-label">Години опит</div>
+        </div>
+        <div class="stat-item fade-up">
+          <div class="stat-number" data-count="100" data-suffix="%">0</div>
+          <div class="stat-label">Гаранция за качество</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="./Logos_ByTailorBrands/white_logo_transparent_background.webp" alt="Raintex" loading="lazy">
+          <p>Raintex предлага модерни решения за автоматизирано поливане, хидрофорни системи и цялостни ВиК услуги. Не стой на сухо!</p>
+        </div>
+        <div>
+          <h4>Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Начало</a></li>
+            <li><a href="about.html">За нас</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="gallery.html">Галерия</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Контакти</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+35988830610">+359 888 306 10</a></li>
+            <li><a href="mailto:raintex@abv.bg">raintex@abv.bg</a></li>
+            <li><a href="contacts.html">София, България</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Raintex. Всички права запазени.</span>
+        <span>Не стой на сухо</span>
+      </div>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
