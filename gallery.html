@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерия | Raintex</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #555;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #006b3c;/*#00B3B3 /* #009fe3 */
+      padding: 15px 0;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .logo {
+      height: 40px;
+      width: auto;
+    }
+    .hero-section {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('./images/gallery-hero.jpg') no-repeat center center;
+      background-size: cover;
+      text-align: center;
+      padding: 120px 20px 80px 20px;
+      color: white;
+    }
+    .hero-section h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 40px 20px;
+      max-width: 1400px;
+      margin: auto;
+    }
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+    .lightbox:target {
+      display: flex;
+    }
+    footer {
+      background-color: #006b3c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 80px 20px 60px 20px;
+      }
+      .hero-section h1 {
+        font-size: 36px;
+      }
+      nav {
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+            }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html"><img src="./Logos_ByTailorBrands/dark_logo_transparent_background.png" alt="Raintex Logo" class="logo"></a>
+    <a href="about.html">За нас</a>
+    <a href="services.html">Услуги</a>
+    <a href="gallery.html">Галерия</a>
+    <a href="contacts.html">Контакти</a>
+  </nav>
+
+  <section class="hero-section">
+    <h1>Галерия</h1>
+  </section>
+
+  <section class="gallery">
+    <a href="#img1"><img src="./images/gallery1.jpg" alt="Проект 1"></a>
+    <a href="#img2"><img src="./images/gallery2.jpg" alt="Проект 2"></a>
+    <a href="#img3"><img src="./images/gallery3.jpg" alt="Проект 3"></a>
+    <a href="#img4"><img src="./images/gallery4.jpg" alt="Проект 4"></a>
+    <a href="#img5"><img src="./images/gallery5.jpg" alt="Проект 5"></a>
+    <a href="#img6"><img src="./images/gallery6.jpg" alt="Проект 6"></a>
+  </section>
+
+  <!-- Lightbox Modals -->
+  <div id="img1" class="lightbox">
+    <a href="#"><img src="./images/gallery1.jpg" alt="Проект 1"></a>
+  </div>
+  <div id="img2" class="lightbox">
+    <a href="#"><img src="./images/gallery2.jpg" alt="Проект 2"></a>
+  </div>
+  <div id="img3" class="lightbox">
+    <a href="#"><img src="./images/gallery3.jpg" alt="Проект 3"></a>
+  </div>
+  <div id="img4" class="lightbox">
+    <a href="#"><img src="./images/gallery4.jpg" alt="Проект 4"></a>
+  </div>
+  <div id="img5" class="lightbox">
+    <a href="#"><img src="./images/gallery5.jpg" alt="Проект 5"></a>
+  </div>
+  <div id="img6" class="lightbox">
+    <a href="#"><img src="./images/gallery6.jpg" alt="Проект 6"></a>
+  </div>
+
+  <footer>
+    <p>© 2025 Raintex | Не стой на сухо</p>
+  </footer>
+
+</body>
+</html>

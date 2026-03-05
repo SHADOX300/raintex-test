@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raintex - Не стой на сухо</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #4da6ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color: #3399ff;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+        }
+        .hero h1 {
+            font-size: 36px;
+            color: #3399ff;
+        }
+        .hero p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: #e6f2ff;
+            padding: 40px 20px;
+        }
+        .service {
+            max-width: 300px;
+            background: white;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .service h3 {
+            color: #007acc;
+        }
+        footer {
+            background-color: #3399ff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Raintex Лого">
+        <h1>Raintex</h1>
+        <p><em>Не стой на сухо</em></p>
+    </header>
+
+    <nav>
+        <a href="#">Начало</a>
+        <a href="#">За нас</a>
+        <a href="#">Услуги</a>
+        <a href="#">Галерия</a>
+        <a href="#">Контакти</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Умни решения за всяка капка вода</h1>
+        <p>Автоматизирани поливни и хидрофорни системи за домове, градини и сгради.</p>
+    </section>
+
+    <section class="services">
+        <div class="service">
+            <h3>Поливни системи</h3>
+            <p>Индивидуално проектирани решения за вашата градина или двор.</p>
+        </div>
+        <div class="service">
+            <h3>Хидрофори</h3>
+            <p>Надеждни системи за водоснабдяване в дома, вилата или бизнеса.</p>
+        </div>
+        <div class="service">
+            <h3>Монтаж и поддръжка</h3>
+            <p>Бърза реакция и професионализъм от първия ден.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Raintex | Не стой на сухо</p>
+    </footer>
+</body>
+</html>
