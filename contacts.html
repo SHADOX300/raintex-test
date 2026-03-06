@@ -4,152 +4,154 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Контакти | Raintex</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffffff;
-      color: #555;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #006b3c;/*#00B3B3 /* #009fe3 */
-      padding: 15px 0;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .logo {
-      height: 40px;
-      width: auto;
-    }
-    .hero-section {
-      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('./images/landscape-tree-grass.jpg') no-repeat center 60%;
-      background-size: cover;
-      text-align: center;
-      padding: 120px 20px 80px 20px;
-      color: white;
-    }
-    .hero-section h1 {
-      font-size: 50px;
-      margin-bottom: 10px;
-    }
-    .contact-section {
-      max-width: 1200px;
-      margin: 60px auto;
-      padding: 0 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: center;
-    }
-    .contact-info, .contact-form {
-      flex: 1 1 300px;
-      background: #f9f9f9;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .contact-info h2, .contact-form h2 {
-      color: #00B3B3;
-      margin-bottom: 20px;
-    }
-    .contact-info p {
-      margin: 10px 0;
-      font-size: 18px;
-    }
-    .contact-form form {
-      display: flex;
-      flex-direction: column;
-    }
-    .contact-form input, .contact-form textarea {
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-    .contact-form button {
-      background-color: #00B3B3;
-      color: white;
-      padding: 12px;
-      font-size: 18px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .contact-form button:hover {
-      background-color: #009999;
-    }
-    footer {
-      background-color: #006b3c;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    @media (max-width: 768px) {
-      .hero-section {
-        padding: 80px 20px 60px 20px;
-      }
-      .hero-section h1 {
-        font-size: 36px;
-      }
-      nav {
-                flex-direction: row;
-                gap: 10px;
-                align-items: center;
-            }
-    }
-  </style>
+  <meta name="description" content="Свържете се с Raintex за безплатна консултация за поливни системи, хидрофори и ВиК услуги.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <nav>
-    <a href="index.html"><img src="./Logos_ByTailorBrands/dark_logo_transparent_background.png" alt="Raintex Logo" class="logo"></a>
-    <a href="about.html">За нас</a>
-    <a href="services.html">Услуги</a>
-    <a href="gallery.html">Галерия</a>
-    <a href="contacts.html">Контакти</a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="./Logos_ByTailorBrands/dark_logo_transparent_background.webp" alt="Raintex Logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Начало</a>
+        <a href="about.html">За нас</a>
+        <a href="services.html">Услуги</a>
+        <a href="gallery.html">Галерия</a>
+        <a href="contacts.html" class="nav-cta active">Контакти</a>
+      </div>
+      <button class="hamburger" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </nav>
+  <div class="nav-overlay"></div>
 
-  <section class="hero-section">
+  <!-- Page Hero -->
+  <section class="page-hero">
     <h1>Контакти</h1>
+    <p>Свържете се с нас за безплатна консултация и оферта</p>
   </section>
 
-  <section class="contact-section">
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
 
-    <div class="contact-info">
-      <h2>Свържете се с нас</h2>
-      <p><strong>Адрес:</strong> София, България</p>
-      <p><strong>Телефон:</strong> +359 888 306 10</p>
-      <p><strong>Имейл:</strong> raintex@abv.bg</p>
-      <p><strong>Работно време:</strong> Пон - Пет: 9:00 - 18:00</p>
+        <!-- Contact Info -->
+        <div>
+          <span class="section-label">Информация за контакт</span>
+          <h2 class="section-title" style="font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 32px;">Свържете се с нас</h2>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#006b3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="contact-card-text">
+              <h4>Адрес</h4>
+              <p>София, България</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#006b3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="contact-card-text">
+              <h4>Телефон</h4>
+              <p><a href="tel:+359888830610" style="color: var(--color-primary); font-weight: 600;">+359 8888 306 10</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#006b3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="contact-card-text">
+              <h4>Имейл</h4>
+              <p><a href="mailto:raintex@abv.bg" style="color: var(--color-primary); font-weight: 600;">raintex@abv.bg</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#006b3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="contact-card-text">
+              <h4>Работно време</h4>
+              <p>Понеделник - Петък: 9:00 - 18:00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="card" style="padding: 40px;">
+          <h3 style="font-size: 1.3rem; margin-bottom: 28px; color: var(--color-gray-800);">Изпратете ни съобщение</h3>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Вашето име</label>
+              <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Имейл адрес</label>
+              <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Телефон (по желание)</label>
+              <input type="tel" id="phone" name="phone" placeholder="+359 888 000 000">
+            </div>
+            <div class="form-group">
+              <label for="message">Вашето съобщение</label>
+              <textarea id="message" name="message" rows="5" placeholder="Опишете какво ви е необходимо..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-accent" style="width: 100%; justify-content: center;">Изпрати съобщение</button>
+          </form>
+        </div>
+
+      </div>
     </div>
-
-    <div class="contact-form">
-      <h2>Изпратете ни съобщение</h2>
-      <form action="#" method="post">
-        <input type="text" name="name" placeholder="Вашето име" required>
-        <input type="email" name="email" placeholder="Вашият имейл" required>
-        <textarea name="message" rows="5" placeholder="Вашето съобщение" required></textarea>
-        <button type="submit">Изпрати</button>
-      </form>
-    </div>
-
   </section>
 
-  <footer>
-    <p>© 2025 Raintex | Не стой на сухо</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="./Logos_ByTailorBrands/white_logo_transparent_background.webp" alt="Raintex" loading="lazy">
+          <p>Raintex предлага модерни решения за автоматизирано поливане, хидрофорни системи и цялостни ВиК услуги. Не стой на сухо!</p>
+        </div>
+        <div>
+          <h4>Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Начало</a></li>
+            <li><a href="about.html">За нас</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="gallery.html">Галерия</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Контакти</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+359888830610">+359 8888 306 10</a></li>
+            <li><a href="mailto:raintex@abv.bg">raintex@abv.bg</a></li>
+            <li><a href="contacts.html">София, България</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Raintex. Всички права запазени.</span>
+        <span>Не стой на сухо</span>
+      </div>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
