@@ -137,3 +137,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+  // --- Category box ---
+
+    function showCategory(categoryId, el) {
+
+      // hide all categories
+      document.querySelectorAll('.product-category').forEach(cat => {
+        cat.classList.remove('active');
+      });
+
+      // show selected
+      document.getElementById(categoryId).classList.add('active');
+
+      // remove active from all menu items
+      document.querySelectorAll('.footer-links li').forEach(li => {
+        li.classList.remove('active');
+      });
+
+      // highlight clicked one
+      el.classList.add('active');
+    }
+
+    // OPTIONAL: show first category on load
+    document.addEventListener("DOMContentLoaded", () => {
+      const first = document.querySelector('.footer-links li');
+      if (first) first.click();
+    });
