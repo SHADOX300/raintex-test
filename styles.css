@@ -127,6 +127,12 @@ h1, h2, h3, h4 {
   padding: 0 24px;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
 /* --- Navigation --- */
 .navbar {
   position: fixed;
@@ -491,7 +497,7 @@ h1, h2, h3, h4 {
 }
 
 .card p {
-  color: var(--color-acce);
+  color: var(--color-gray-900);
   line-height: 1.7;
   font-size: 0.95rem;
 }
@@ -576,8 +582,8 @@ h1, h2, h3, h4 {
 }
 
 .feature-text p {
-  color: var(--color-accent);
-  text-shadow: 2px 2px 2px black;
+  color: var(--color-gray-900);
+  /* text-shadow: 2px 2px 2px black; */
   font-size: 1.05rem;
   line-height: 1.8;
 }
@@ -1125,7 +1131,8 @@ h1, h2, h3, h4 {
 
 }
 
-/* Mobile overlay */
+/* 
+ overlay */
 .nav-overlay {
   position: fixed;
   inset: 0;
