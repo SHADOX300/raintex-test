@@ -258,13 +258,19 @@ font-size:34px;
 
 <section class="products-section">
 
+  <div class="products-wrapper">
   <!-- LEFT SIDEBAR -->
   <div  class="category-box">
+
+    
     <aside  class="category">
 
-      <h3>Категории</h3>
+      <div class="category-header">
+        <h3 style="color: var(--color-primary); font-size: clamp(1.5rem, 0.1vw, 1.5rem); margin-bottom: 25px; font-weight: 600;">Категории</h3>
+          <button class="filter-close">✕</button>
+      </div>
 
-      <ul class="footer-links">
+      <ul>
       <li onclick="showCategory('irrigation', this)">Поливни системи</li>
       <li onclick="showCategory('sprinklers', this)">Разпръсквачи</li>
       <li onclick="showCategory('pumps', this)">Помпи</li>
@@ -274,10 +280,12 @@ font-size:34px;
       </ul>
 
     </aside>
-  </div>
+    </div>
 
   <!-- RIGHT PRODUCTS -->
-   
+      <button class="filter-toggle">
+         ☰ Категории
+      </button>
 
     <div class="products" >
 
@@ -287,17 +295,17 @@ font-size:34px;
           <div class="card">
               <img src="images/sprinkler_left.svg">
               <p>Автоматична поливна система</p>
-              <p class="price">250 лв</p>
-              <a href="article1.html" class="btn">Виж повече</a>
+              <!-- <p class="price">от 500 €</p> -->
+              <!-- <a href="article1.html" class="btn">Виж повече</a> -->
           </div>
         <!-- </div> -->
 
         <!-- <div class="product-category active" id="irrigation"> -->
           <div class="card">
-              <img src="images/sprinkler_corner.svg">
+              <img src="images/controler.webp">
               <p>Контролер Raintex</p>
-              <p class="price">120 лв</p>
-              <a href="article2.html" class="btn">Виж повече</a>
+              <!-- <p class="price">от 192 €</p> -->
+              <!-- <a href="article2.html" class="btn">Виж повече</a> -->
           </div>
         </div>
 
@@ -306,10 +314,10 @@ font-size:34px;
       <div class="product-category active" id="sprinklers">
 
         <div class="card">
-          <img src="images/sprinkler.jpg">
+          <img src="images/sprinkler_left.svg">
           <h4>Разпръсквач</h4>
-          <p class="price">38 лв</p>
-          <a href="article5.html" class="btn">Виж повече</a>
+          <!-- <p class="price">19.66 €</p> -->
+          <!-- <a href="article5.html" class="btn">Виж повече</a> -->
         </div>
 
       </div>
@@ -320,15 +328,15 @@ font-size:34px;
         <div class="card">
           <img src="images/leo-pump.webp">
           <h4>Хидрофорна помпа</h4>
-          <p class="price">340 лв</p>
-          <a href="article3.html" class="btn">Виж повече</a>
+          <!-- <p class="price">от 300 €</p> -->
+          <!-- <a href="article3.html" class="btn">Виж повече</a> -->
         </div>
 
         <div class="card">
           <img src="images/leo-ldw-6-55-1100e-potopaema.webp">
           <h4>Хидрофорна помпа</h4>
-          <p class="price">340 лв</p>
-          <a href="article3.html" class="btn">Виж повече</a>
+          <!-- <p class="price">от 300 €</p> -->
+          <!-- <a href="article3.html" class="btn">Виж повече</a> -->
         </div>
       </div>
 
@@ -338,15 +346,15 @@ font-size:34px;
         <div class="card">
           <img src="images/HDPE-Pipe.avif">
           <h4>PE Тръба</h4>
-          <p class="price">3.20 лв / м</p>
-          <a href="article4.html" class="btn">Виж повече</a>
+          <!-- <p class="price">1.60 € / м</p> -->
+          <!-- <a href="article4.html" class="btn">Виж повече</a> -->
         </div>
 
       <div class="card">
-        <img src="images/rainbird-spxflex.jpeg">
+        <img src="/images/rainbird-spxflex.WEBP">
           <h4>Гъвкава връзка - flex</h4>
-          <p class="price">120 лв</p>
-          <a href="article4.html" class="btn">Виж повече</a>
+          <!-- <p class="price">60 €</p> -->
+          <!-- <a href="article4.html" class="btn">Виж повече</a> -->
         </div>
       </div>
 
@@ -354,25 +362,26 @@ font-size:34px;
 
       <div class="product-category active" id="reservoir">
         <div class="card">
-          <img src="images/hyrdo-reservoir.jpg">
+          <img src="./images/hyrdo-reservoir.WEBP">
           <h4>Резервоари</h4>
-          <p class="price">1000 лв</p>
-          <a href="article5.html" class="btn">Виж повече</a>
+          <!-- <p class="price">600 €</p> -->
+          <!-- <a href="article5.html" class="btn">Виж повече</a> -->
         </div>
       </div>
 
       <!-- accessories -->
 
-      <div class="product-category active" id="accessories"">
+      <div class="product-category active" id="accessories">
         <div class="card">
           <img src="images/PP-Compression-Fitting.avif">
           <h4>Фитинги</h4>
-          <p class="price">10 лв</p>
-          <a href="article5.html" class="btn">Виж повече</a>
+          <!-- <p class="price">1 - 5 €</p> -->
+          <!-- <a href="article5.html" class="btn">Виж повече</a> -->
         </div>
       </div>
 
     </div>
+  </div>
 
 </section>
 
@@ -381,7 +390,9 @@ font-size:34px;
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="./Logos_ByTailorBrands/white_logo_transparent_background.webp" alt="Raintex" loading="lazy">
+            <a href="index.html" class="nav-logo">
+              <img src="./Logos_ByTailorBrands/white_logo_transparent_background.webp" alt="Raintex" loading="lazy">
+            </a>
           <p>Raintex предлага модерни решения за автоматизирано поливане, хидрофорни системи и цялостни ВиК услуги. Не стой на сухо!</p>
         </div>
         <div>
@@ -391,13 +402,15 @@ font-size:34px;
             <li><a href="about.html">За нас</a></li>
             <li><a href="services.html">Услуги</a></li>
             <li><a href="gallery.html">Галерия</a></li>
+            <li><a href="Products.html">Продукти</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
           </ul>
         </div>
         <div>
           <h4>Контакти</h4>
           <ul class="footer-links">
-            <li><a href="tel:+359888830610">+359 8888 306 10</a></li>
-            <li><a href="mailto:raintex@abv.bg">raintex@abv.bg</a></li>
+            <li><a class="copy-phone" data-phone="+359888830610">+359 8888 306 10</a></li>
+            <li><a class="copy-phone" data-phone="raintex@abv.bg">raintex@abv.bg</a></li>
             <li><a href="contacts.html">София, България</a></li>
           </ul>
         </div>
@@ -411,7 +424,7 @@ font-size:34px;
 
   <script src="script.js"></script>
 
-<script>
+<!-- <script>
 
 function showCategory(category, element){
 
@@ -435,7 +448,7 @@ element.classList.add("active");
 
 }
 
-</script>
-
+</script> -->
+<!-- <div class="filter-overlay"></div> -->
 </body>
 </html>

@@ -140,27 +140,69 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Category box ---
 
-    function showCategory(categoryId, el) {
+function showCategory(categoryId, el) {
 
-      // hide all categories
-      document.querySelectorAll('.product-category').forEach(cat => {
-        cat.classList.remove('active');
-      });
+  document.addEventListener("DOMContentLoaded", () => {
+  const first = document.querySelector('.category-box li');
+  if (first) first.click();
+});
 
-      // show selected
-      document.getElementById(categoryId).classList.add('active');
+  document.querySelectorAll('.product-category').forEach(cat => {
+    cat.classList.remove('active');
+  });
 
-      // remove active from all menu items
-      document.querySelectorAll('.footer-links li').forEach(li => {
-        li.classList.remove('active');
-      });
+  document.getElementById(categoryId).classList.add('active');
 
-      // highlight clicked one
-      el.classList.add('active');
-    }
+  document.querySelectorAll('.category-box li').forEach(li => {
+    li.classList.remove('active');
+  });
 
-    // OPTIONAL: show first category on load
-    document.addEventListener("DOMContentLoaded", () => {
-      const first = document.querySelector('.footer-links li');
-      if (first) first.click();
+  el.classList.add('active');
+}
+
+const filterToggle = document.querySelector('.filter-toggle');
+const categoryBox = document.querySelector('.category-box');
+const filterClose = document.querySelector('.filter-close');
+
+if (filterClose) {
+  filterClose.addEventListener('click', () => {
+    categoryBox.classList.remove('open');
+  });
+}
+
+
+if (filterToggle && categoryBox) {
+
+  // toggle open
+  filterToggle.addEventListener('click', () => {
+    categoryBox.classList.toggle('open');
+  });
+
+  // ✅ close when clicking a category
+  document.querySelectorAll('.category-box li').forEach(item => {
+    item.addEventListener('click', () => {
+      categoryBox.classList.remove('open');
     });
+  });
+
+  // ✅ close when clicking outside
+  document.addEventListener('click', (e) => {
+    const isClickInside = categoryBox.contains(e.target);
+    const isButton = filterToggle.contains(e.target);
+
+    if (!isClickInside && !isButton) {
+      categoryBox.classList.remove('open');
+    }
+  });
+
+}
+
+
+document.querySelectorAll('.copy-phone').forEach(el => {
+  el.addEventListener('click', () => {
+    navigator.clipboard.writeText(el.dataset.phone);
+    const originalText = el.textContent;
+    el.textContent = "Копирано!";
+    setTimeout(() => { el.textContent = originalText; }, 1500);
+  });
+});
