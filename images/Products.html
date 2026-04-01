@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Продукти | Raintex</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+background:#fff;
+color:#555;
+}
+
+/* NAV */
+
+nav{
+display:flex;
+justify-content:center;
+align-items:center;
+background:#006b3c;
+padding:15px 0;
+gap:30px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.logo{
+height:40px;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)),
+url('./images/landscape-tree-grass.jpg');
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+/* SHOP */
+
+.shop-container{
+max-width:1300px;
+margin:60px auto;
+display:flex;
+gap:40px;
+padding:20px;
+}
+
+/* SIDEBAR */
+
+.sidebar li{
+padding:10px;
+cursor:pointer;
+border-bottom:1px solid #ddd;
+transition:0.2s;
+}
+
+.sidebar li:hover{
+color:#006b3c;
+font-weight:bold;
+}
+
+.sidebar li.active{
+font-weight:bold;
+color:#004d2b;
+border-bottom:3px solid #006b3c;
+}
+
+.sidebar{
+min-width:200px;
+}
+
+.sidebar h3{ 
+  font-weight: 900;
+color:#006b3c; 
+}
+
+.sidebar ul{
+list-style:none;
+padding: 10px;;
+}
+
+
+
+/* PRODUCTS */
+
+.products{
+flex:1;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.product-card{
+border:1px solid #eee;
+border-radius:8px;
+padding:15px;
+text-align:center;
+background:white;
+transition:0.3s;
+}
+
+.product-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-card img{
+width:100%;
+height:auto;
+max-width: 600px;
+/* max-height:300px; */
+object-fit:contain;
+border-radius:6px;
+}
+
+.product-card h4{
+margin:10px 0;
+}
+
+.price{
+color:#006b3c;
+font-weight:bold;
+}
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 14px;
+background:#006b3c;
+color:white;
+text-decoration:none;
+border-radius:4px;
+}
+
+/* FOOTER */
+
+footer{
+background:#006b3c;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.shop-container{
+flex-direction:column;
+}
+
+.sidebar{
+display:flex;
+overflow-x:auto;
+}
+
+.sidebar ul{
+display:flex;
+gap:20px;
+}
+
+.sidebar li{
+border:none;
+white-space:nowrap;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="main-nav">
+
+<div class="nav-left">
+
+<a href="index.html">
+<img src="./Logos_ByTailorBrands/dark_logo_transparent_background.png" class="logo">
+</a>
+
+</div>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Търси продукт...">
+</div>
+
+<div class="nav-links">
+<a href="about.html">За нас</a>
+<a href="services.html">Услуги</a>
+<a href="Products.html">Продукти</a>
+<a href="gallery.html">Галерия</a>
+<a href="contacts.html">Контакти</a>
+</div>
+
+<div class="cart">
+
+🛒 <span id="cart-count">0</span>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>Нашите продукти</h1>
+<p>Професионални решения за поливане и водоснабдяване</p>
+
+</section>
+
+<section class="shop-container">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<h3>Категории</h3>
+
+<ul>
+
+<li onclick="showCategory('irrigation', this)">Поливни системи</li>
+<li onclick="showCategory('sprinklers', this)">Разпръсквачи</li>
+<li onclick="showCategory('pumps', this)">Помпи</li>
+<li onclick="showCategory('pipes', this)">Тръби</li>
+<li onclick="showCategory('reservoir', this)">Резервоари</li>
+<li onclick="showCategory('accessories', this)">Фитинги</li>
+
+</ul>
+
+</aside>
+
+<!-- PRODUCTS -->
+
+<div class="products">
+
+<!-- irrigation -->
+
+<div class="product-category" id="irrigation">
+
+<div class="product-card">
+
+<img src="images/sprinkler_left.svg">
+
+<h4>Автоматична поливна система</h4>
+
+<p class="price">250 лв</p>
+
+<a href="article1.html" class="btn">Виж повече</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/sprinkler_corner.svg">
+
+<h4>Контролер Raintex</h4>
+
+<p class="price">120 лв</p>
+
+<a href="article2.html" class="btn">Виж повече</a>
+
+</div>
+
+</div>
+
+<!-- sprinklers -->
+
+<div class="product-category" id="sprinklers" style="display:none">
+
+<div class="product-card">
+
+<img src="images/sprinkler.jpg">
+
+<h4>Разпръсквач</h4>
+
+<p class="price">38 лв</p>
+
+<a href="article5.html" class="btn">Виж повече</a>
+
+</div>
+
+</div>
+
+<!-- pumps -->
+
+<div class="product-category" id="pumps" style="display:none">
+
+<div class="product-card">
+
+<img src="images/leo-pump.webp">
+
+<h4>Хидрофорна помпа</h4>
+
+<p class="price">340 лв</p>
+
+<a href="article3.html" class="btn">Виж повече</a>
+
+</div>
+<div class="product-card">
+
+<img src="images/leo-ldw-6-55-1100e-potopaema.webp">
+
+<h4>Хидрофорна помпа</h4>
+
+<p class="price">340 лв</p>
+
+<a href="article3.html" class="btn">Виж повече</a>
+
+</div>
+
+
+
+</div>
+
+<!-- pipes -->
+
+<div class="product-category" id="pipes" style="display:none">
+
+<div class="product-card">
+
+<img src="images/HDPE-Pipe.avif">
+
+<h4>PE Тръба</h4>
+
+<p class="price">3.20 лв / м</p>
+
+<a href="article4.html" class="btn">Виж повече</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/rainbird-spxflex.jpeg">
+
+<h4>Гъвкава връзка - flex</h4>
+
+<p class="price">120 лв</p>
+
+<a href="article4.html" class="btn">Виж повече</a>
+
+</div>
+
+</div>
+
+<!-- reservoir -->
+
+<div class="product-category" id="reservoir" style="display:none">
+
+<div class="product-card">
+<img src="images/hyrdo-reservoir.jpg">
+<h4>Резервоари</h4>
+<p class="price">1000 лв</p>
+<a href="article5.html" class="btn">Виж повече</a>
+</div>
+
+</div>
+
+<!-- accessories -->
+
+<div class="product-category" id="accessories" style="display:none">
+
+<div class="product-card">
+
+<img src="images/PP-Compression-Fitting.avif">
+
+<h4>Фитинги</h4>
+
+<p class="price">10 лв</p>
+
+<a href="article5.html" class="btn">Виж повече</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2025 Raintex | Не стой на сухо</p>
+
+</footer>
+
+<script>
+
+function showCategory(category, element){
+
+const categories = document.querySelectorAll(".product-category");
+categories.forEach(cat=>{
+cat.style.display="none";
+});
+
+document.getElementById(category).style.display="grid";
+
+/* маха активния клас */
+
+const items = document.querySelectorAll(".sidebar li");
+items.forEach(i=>{
+i.classList.remove("active");
+});
+
+/* добавя активния */
+
+element.classList.add("active");
+
+}
+
+</script>
+
+</body>
+</html>
