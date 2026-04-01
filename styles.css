@@ -644,6 +644,9 @@ h1, h2, h3, h4 {
   );
 }
 
+.glass-box-wrapper {
+  margin-bottom: 40px; /* adjust the space as needed */
+}
 
 /* --- Products --- */
 
