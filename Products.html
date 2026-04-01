@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raintex - Не стой на сухо</title>
-  <meta name="description" content="Raintex - Умни решения за поливни системи, хидрофорни системи и филтрация. Не стой на сухо!">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Продукти | Raintex</title>
 
-<!-- <style>
+<style>
 
 body{
 margin:0;
@@ -196,12 +189,18 @@ font-size:34px;
 
 }
 
-</style> -->
+</style>
 </head>
 
+<body>
 
+<nav class="main-nav">
 
+<div class="nav-left">
 
+<a href="index.html">
+<img src="./Logos_ByTailorBrands/dark_logo_transparent_background.png" class="logo">
+</a>
 
 </div>
 
@@ -209,222 +208,205 @@ font-size:34px;
 <input type="text" id="searchInput" placeholder="Търси продукт...">
 </div>
 
+<div class="nav-links">
+<a href="about.html">За нас</a>
+<a href="services.html">Услуги</a>
+<a href="Products.html">Продукти</a>
+<a href="gallery.html">Галерия</a>
+<a href="contacts.html">Контакти</a>
+</div>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-logo">
-        <img src="./Logos_ByTailorBrands/dark_logo_transparent_background.webp" alt="Raintex Logo">
-      </a>
-      <div class="nav-links">
-        <a href="index.html" >Начало</a>
-        <a href="about.html">За нас</a>
-        <a href="services.html">Услуги</a>
-        <a href="Products.html"class="active">Продукти</a>
-        <a href="gallery.html">Галерия</a>
-        <a href="contacts.html" class="nav-cta">Контакти</a>
-      </div>
-      <button class="hamburger" aria-label="Меню">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-    
-  </nav>
-  <div class="nav-overlay"></div>
+<div class="cart">
 
+🛒 <span id="cart-count">0</span>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg" style="background-image: url('./images/landscape-tree-grass.webp')"></div>
-    <div class="hero-content">
-      <img src="./images/logo_white_transparent.png" alt="Raintex Лого">
-      <!-- <span class="section-label">Raintex</span> -->
-      <h1>Не стой на сухо</h1>
-      <p>Умни решения за всяка капка вода. Автоматизирани поливни и хидрофорни системи за домове, градини и бизнеса.</p>
-      <div class="hero-buttons">
-      </div>
-    </div>
-  </section>
+</div>
 
-<!--- SECTION DIVIDER --->
+</nav>
 
-  <section class="section-divider"></section>
+<section class="hero">
 
-
-<!-- PRODUCTS SECTION -->
-
-
-<section class="products-section">
-
-  <div class="products-wrapper">
-  <!-- LEFT SIDEBAR -->
-  <div  class="category-box">
-
-    
-    <aside  class="category">
-
-      <div class="category-header">
-        <h3 style="color: var(--color-primary); font-size: clamp(1.5rem, 0.1vw, 1.5rem); margin-bottom: 25px; font-weight: 600;">Категории</h3>
-          <button class="filter-close">✕</button>
-      </div>
-
-      <ul>
-      <li onclick="showCategory('irrigation', this)">Поливни системи</li>
-      <li onclick="showCategory('sprinklers', this)">Разпръсквачи</li>
-      <li onclick="showCategory('pumps', this)">Помпи</li>
-      <li onclick="showCategory('pipes', this)">Тръби</li>
-      <li onclick="showCategory('reservoir', this)">Резервоари</li>
-      <li onclick="showCategory('accessories', this)">Фитинги</li>
-      </ul>
-
-    </aside>
-    </div>
-
-  <!-- RIGHT PRODUCTS -->
-      <button class="filter-toggle">
-         ☰ Категории
-      </button>
-
-    <div class="products" >
-
-      <!-- irrigation -->
-
-        <div class="product-category active" id="irrigation">
-          <div class="card">
-              <img src="images/sprinkler_left.svg">
-              <p>Автоматична поливна система</p>
-              <!-- <p class="price">от 500 €</p> -->
-              <!-- <a href="article1.html" class="btn">Виж повече</a> -->
-          </div>
-        <!-- </div> -->
-
-        <!-- <div class="product-category active" id="irrigation"> -->
-          <div class="card">
-              <img src="images/controler.webp">
-              <p>Контролер Raintex</p>
-              <!-- <p class="price">от 192 €</p> -->
-              <!-- <a href="article2.html" class="btn">Виж повече</a> -->
-          </div>
-        </div>
-
-      <!-- sprinklers -->
-
-      <div class="product-category active" id="sprinklers">
-
-        <div class="card">
-          <img src="images/sprinkler_left.svg">
-          <h4>Разпръсквач</h4>
-          <!-- <p class="price">19.66 €</p> -->
-          <!-- <a href="article5.html" class="btn">Виж повече</a> -->
-        </div>
-
-      </div>
-
-      <!-- pumps -->
-
-      <div class="product-category active" id="pumps">
-        <div class="card">
-          <img src="images/leo-pump.webp">
-          <h4>Хидрофорна помпа</h4>
-          <!-- <p class="price">от 300 €</p> -->
-          <!-- <a href="article3.html" class="btn">Виж повече</a> -->
-        </div>
-
-        <div class="card">
-          <img src="images/leo-ldw-6-55-1100e-potopaema.webp">
-          <h4>Хидрофорна помпа</h4>
-          <!-- <p class="price">от 300 €</p> -->
-          <!-- <a href="article3.html" class="btn">Виж повече</a> -->
-        </div>
-      </div>
-
-      <!-- pipes -->
-
-      <div class="product-category active" id="pipes">
-        <div class="card">
-          <img src="images/HDPE-Pipe.avif">
-          <h4>PE Тръба</h4>
-          <!-- <p class="price">1.60 € / м</p> -->
-          <!-- <a href="article4.html" class="btn">Виж повече</a> -->
-        </div>
-
-      <div class="card">
-        <img src="/images/rainbird-spxflex.jpeg">
-          <h4>Гъвкава връзка - flex</h4>
-          <!-- <p class="price">60 €</p> -->
-          <!-- <a href="article4.html" class="btn">Виж повече</a> -->
-        </div>
-      </div>
-
-      <!-- reservoir -->
-
-      <div class="product-category active" id="reservoir">
-        <div class="card">
-          <img src="./images/hyrdo-reservoir.jpg">
-          <h4>Резервоари</h4>
-          <!-- <p class="price">600 €</p> -->
-          <!-- <a href="article5.html" class="btn">Виж повече</a> -->
-        </div>
-      </div>
-
-      <!-- accessories -->
-
-      <div class="product-category active" id="accessories">
-        <div class="card">
-          <img src="images/PP-Compression-Fitting.avif">
-          <h4>Фитинги</h4>
-          <!-- <p class="price">1 - 5 €</p> -->
-          <!-- <a href="article5.html" class="btn">Виж повече</a> -->
-        </div>
-      </div>
-
-    </div>
-  </div>
+<h1>Нашите продукти</h1>
+<p>Професионални решения за поливане и водоснабдяване</p>
 
 </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-            <a href="index.html" class="nav-logo">
-              <img src="./Logos_ByTailorBrands/white_logo_transparent_background.webp" alt="Raintex" loading="lazy">
-            </a>
-          <p>Raintex предлага модерни решения за автоматизирано поливане, хидрофорни системи и цялостни ВиК услуги. Не стой на сухо!</p>
-        </div>
-        <div>
-          <h4>Навигация</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Начало</a></li>
-            <li><a href="about.html">За нас</a></li>
-            <li><a href="services.html">Услуги</a></li>
-            <li><a href="gallery.html">Галерия</a></li>
-            <li><a href="Products.html">Продукти</a></li>
-            <li><a href="contacts.html">Контакти</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Контакти</h4>
-          <ul class="footer-links">
-            <li><a class="copy-phone" data-phone="+359888830610">+359 8888 306 10</a></li>
-            <li><a class="copy-phone" data-phone="raintex@abv.bg">raintex@abv.bg</a></li>
-            <li><a href="contacts.html">София, България</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2025 Raintex. Всички права запазени.</span>
-        <span>Не стой на сухо</span>
-      </div>
-    </div>
-  </footer>
+<section class="shop-container">
 
-  <script src="script.js"></script>
+<!-- SIDEBAR -->
 
-<!-- <script>
+<aside class="sidebar">
+
+<h3>Категории</h3>
+
+<ul>
+
+<li onclick="showCategory('irrigation', this)">Поливни системи</li>
+<li onclick="showCategory('sprinklers', this)">Разпръсквачи</li>
+<li onclick="showCategory('pumps', this)">Помпи</li>
+<li onclick="showCategory('pipes', this)">Тръби</li>
+<li onclick="showCategory('reservoir', this)">Резервоари</li>
+<li onclick="showCategory('accessories', this)">Фитинги</li>
+
+</ul>
+
+</aside>
+
+<!-- PRODUCTS -->
+
+<div class="products">
+
+<!-- irrigation -->
+
+<div class="product-category" id="irrigation">
+
+<div class="product-card">
+
+<img src="images/sprinkler_left.svg">
+
+<h4>Автоматична поливна система</h4>
+
+<p class="price">250 лв</p>
+
+<a href="article1.html" class="btn">Виж повече</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/sprinkler_corner.svg">
+
+<h4>Контролер Raintex</h4>
+
+<p class="price">120 лв</p>
+
+<a href="article2.html" class="btn">Виж повече</a>
+
+</div>
+
+</div>
+
+<!-- sprinklers -->
+
+<div class="product-category" id="sprinklers" style="display:none">
+
+<div class="product-card">
+
+<img src="images/sprinkler.jpg">
+
+<h4>Разпръсквач</h4>
+
+<p class="price">38 лв</p>
+
+<a href="article5.html" class="btn">Виж повече</a>
+
+</div>
+
+</div>
+
+<!-- pumps -->
+
+<div class="product-category" id="pumps" style="display:none">
+
+<div class="product-card">
+
+<img src="images/leo-pump.webp">
+
+<h4>Хидрофорна помпа</h4>
+
+<p class="price">340 лв</p>
+
+<a href="article3.html" class="btn">Виж повече</a>
+
+</div>
+<div class="product-card">
+
+<img src="images/leo-ldw-6-55-1100e-potopaema.webp">
+
+<h4>Хидрофорна помпа</h4>
+
+<p class="price">340 лв</p>
+
+<a href="article3.html" class="btn">Виж повече</a>
+
+</div>
+
+
+
+</div>
+
+<!-- pipes -->
+
+<div class="product-category" id="pipes" style="display:none">
+
+<div class="product-card">
+
+<img src="images/HDPE-Pipe.avif">
+
+<h4>PE Тръба</h4>
+
+<p class="price">3.20 лв / м</p>
+
+<a href="article4.html" class="btn">Виж повече</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/rainbird-spxflex.jpeg">
+
+<h4>Гъвкава връзка - flex</h4>
+
+<p class="price">120 лв</p>
+
+<a href="article4.html" class="btn">Виж повече</a>
+
+</div>
+
+</div>
+
+<!-- reservoir -->
+
+<div class="product-category" id="reservoir" style="display:none">
+
+<div class="product-card">
+<img src="images/hyrdo-reservoir.jpg">
+<h4>Резервоари</h4>
+<p class="price">1000 лв</p>
+<a href="article5.html" class="btn">Виж повече</a>
+</div>
+
+</div>
+
+<!-- accessories -->
+
+<div class="product-category" id="accessories" style="display:none">
+
+<div class="product-card">
+
+<img src="images/PP-Compression-Fitting.avif">
+
+<h4>Фитинги</h4>
+
+<p class="price">10 лв</p>
+
+<a href="article5.html" class="btn">Виж повече</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2025 Raintex | Не стой на сухо</p>
+
+</footer>
+
+<script>
 
 function showCategory(category, element){
 
@@ -448,7 +430,7 @@ element.classList.add("active");
 
 }
 
-</script> -->
-<!-- <div class="filter-overlay"></div> -->
+</script>
+
 </body>
 </html>
